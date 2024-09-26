@@ -50,6 +50,18 @@ pip install .
 ### Usage
 After installing, you can run the package from the command line. By default, it uses the provided `config.yml` to extract tables from the PDF and save them as CSV files in the current working directory.
 
+to provide a new `config.yml`, follow th default structure:
+
+```
+pdf_url: "https://example.com/your-pdf-file.pdf"
+table_settings:
+  join_x_tolerance: 3
+  join_y_tolerance: 10
+  intersection_x_tolerance: 3
+  intersection_y_tolerance: 10
+pattern: "Example.*?(\n|$)"
+```
+
 to run the package:
 
 ```
@@ -62,6 +74,12 @@ If not provided, the default config.yml in the package will be used.
 If not provided, results will be saved in the current working directory.
 
 #### Example
+
+```
+pdf-reader
+```
+This command will extract tables from the PDF specified in the default `config.yml` and save the results in the current folder.
+
 ```
 pdf-reader --config_file config.yml --results_path output
 ```
@@ -73,7 +91,7 @@ This command will extract tables from the PDF specified in `config.yml` and save
 
 This project uses Poetry for dependency management. If you haven't installed Poetry yet, follow the instructions here.
 
-### 1. Clone the repository (W.I.P.)
+### 1. Clone the repository
 
 ```
 git clone https://github.com/mgranica/pdf-reader-extractor.git
