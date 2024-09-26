@@ -1,0 +1,26 @@
+[tool.poetry]
+name = "pdf-reader"
+version = "0.1.0"
+description = "ETL process to extract and load tabular content from pdfs."
+authors = ["Miguel Granica"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "pdf_reader"}]
+include = ["config.yml"]
+
+[tool.poetry.scripts]
+pdf-reader = "pdf_reader.main:main" 
+
+[tool.poetry.dependencies]
+python = "^3.10"
+jupyterlab = "^4.2.5"
+pdfplumber = "^0.11.4"
+pandas = "^2.2.3"
+requests = "^2.32.3"
+pyyaml = "^6.0.2"
+ipdb = "^0.13.13"
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"

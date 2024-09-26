@@ -1,0 +1,9 @@
+pdf_url: "https://sedl.org/afterschool/toolkits/science/pdf/ast_sci_data_tables_sample.pdf"
+
+table_settings:
+  join_x_tolerance: 3
+  join_y_tolerance: 10
+  intersection_x_tolerance: 3
+  intersection_y_tolerance: 10
+
+pattern: "Example.*?(\n|$)"
